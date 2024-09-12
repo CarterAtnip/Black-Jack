@@ -56,3 +56,19 @@ void Deck::shuffleDeck()
 }
 
 
+/*********************
+* Name: getDiscardCount
+* Parameters: None
+* Returns: int
+* gets the number of cards in the discard pile and returns it to caller as an int
+**********************/
+int Deck::getDiscardCount() {return discardPileCount;}
+
+
+/*********************
+* Name: getDrawCount
+* Parameters: None
+* Returns: int
+* gets the number of cards in the draw pile and returns it to caller as an int
+**********************/
+int Deck::getDrawCount() {return drawPileCount;}
