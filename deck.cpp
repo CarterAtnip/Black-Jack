@@ -95,3 +95,17 @@ Card* Deck::draw()
     return topCard;
 }
 
+
+/*********************
+* Name: endRound
+* Parameters: none
+* Returns: bool to determine success
+* takes cards in play a puts them into the discards pile, then clears cards in play
+**********************/
+bool Deck::endRound()
+{
+    discardPile.insert(discardPile.end(), cardsInPlay.begin(), cardsInPlay.end());
+    cardsInPlay.clear();
+
+    return cardsInPlay.empty();
+}
