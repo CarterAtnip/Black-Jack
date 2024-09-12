@@ -6,6 +6,8 @@
 #define DECK_H
 
 #include <vector>
+#include <random>
+#include <time.h>
 #include "card.h"
 
 using std::vector;
@@ -30,8 +32,9 @@ private:
     vector<Card> cardsInPlay;
     int drawPileCount;
     int discardPileCount;
+    int seed;
 
-    void shuffle();
+    void shuffleDeck();
 
 };
 
