@@ -90,5 +90,8 @@ Card* Deck::draw()
     cardsInPlay.push_back(*topCard);
     drawPile.erase(drawPile.begin());
 
+    drawPileCount--;
+
     return topCard;
 }
+
