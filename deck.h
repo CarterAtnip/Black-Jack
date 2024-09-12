@@ -21,9 +21,9 @@ public:
 
     bool endRound();
 
-    int getDiscardCount();
+    int getDiscardCount() const;
 
-    int getDrawCount();
+    int getDrawCount() const;
 
 private:
     //attributes

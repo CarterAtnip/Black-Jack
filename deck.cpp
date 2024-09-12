@@ -62,7 +62,7 @@ void Deck::shuffleDeck()
 * Returns: int
 * gets the number of cards in the discard pile and returns it to caller as an int
 **********************/
-int Deck::getDiscardCount() {return discardPileCount;}
+int Deck::getDiscardCount() const {return discardPileCount;}
 
 
 /*********************
@@ -71,7 +71,7 @@ int Deck::getDiscardCount() {return discardPileCount;}
 * Returns: int
 * gets the number of cards in the draw pile and returns it to caller as an int
 **********************/
-int Deck::getDrawCount() {return drawPileCount;}
+int Deck::getDrawCount() const {return drawPileCount;}
 
 
 /*********************
