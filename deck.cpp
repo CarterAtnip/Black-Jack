@@ -72,3 +72,23 @@ int Deck::getDiscardCount() {return discardPileCount;}
 * gets the number of cards in the draw pile and returns it to caller as an int
 **********************/
 int Deck::getDrawCount() {return drawPileCount;}
+
+
+/*********************
+* Name: draw
+* Parameters: None
+* Returns: ptr to Card ADT
+* takes the top card off the draw pile and returns its value to caller. Then adds it to cardsInPlay.
+**********************/
+Card* Deck::draw()
+{
+    Card* topCard = nullptr;
+
+    if (drawPileCount == 0) {shuffleDeck();}
+
+    topCard = &drawPile.front();
+    cardsInPlay.push_back(*topCard);
+    drawPile.erase(drawPile.begin());
+
+    return topCard;
+}
